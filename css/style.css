@@ -1,140 +1,226 @@
-/*Your Code Here*/
+/* Monica Cichon - SI 539 Mobile Deliverable - Client Project */
 
-/*Write selector/rule property to add your border when
-links in the navigation are in the hover or focus state.*/
-nav a:hover, nav a:focus {
-     border: 2px dotted purple;
+
+body {
+     font-family: "Nunito Sans", sans-serif;
 }
 
-/*Write selector/rule property to position the default position for the skip class element*/
-.skip {
-     position: relative;
+main p, main h2, main h3 {
+     margin: 0px 20px;
 }
 
-.skip a{
+main ul {
+     margin: 0px 10px 0px 30px;
+}
+
+h1 {
+     font-size: 30px;
+     font-weight: 600;
+     padding: 30px 10px 10px 10px;
+     text-decoration: underline solid #FFCB05 2px;
+     text-align: center;
+     text-underline-offset: 4px;
+
+}
+
+h2 {
+     font-size: 20px;
+     font-weight: 600;
+     padding: 20px 0px 20px 0px;
+}
+
+p, h3 {
+     font-size: 18px;
+     padding: 10px 0px 20px 0px;
+     line-height: 1.4;
+}
+
+ul li {
+     font-size: 18px;
+     padding: 10px 0px;
+     margin: 0px 20px 0px 10px;
+     line-height: 1.4;
+}
+
+ol li {
+     font-size: 18px;
+     padding: 10px 0px;
+     margin: 0px 20px 0px 40px;
+     line-height: 1.4;
+}
+
+.hero-image {
+     width: 100%;
+     height: auto;
+     outline: #00274C solid 2px;
+}
+
+.skip-to-main a {
+     background-color: #FFCB05;
+     color: #00274C;
+     font-weight: 500;
      top: -65px;
      position: absolute;
+     padding: 10px;
+     border-radius: 5px;
 }
 
-/*Write selector/rule property to position the skip class element when it is in focus*/
-.skip a:focus {
+.skip-to-main a:focus {
      top: 25px;
 }
 
-/*Write selector/rule property to style all elements when in focus*/
-*:focus {
-     border: 5px dashed green;
+.movie-frame {
+     display: flex;
+     align-items: center;
 }
 
-/*Write selector/rule property to style the container */
-.container {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     gap: 13px;
-}
-
-/*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
-.container > :first-child {
-     grid-column: 1/-1;
-     background-image: url("../images/header.jpg");
-     background-repeat: no-repeat;
-}
-
-/* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
- five rows in the grid. */
-
- .accounts, .onlinebanking, .security, .loans, .contact {
-    grid-column: 2 / span 3;
-}
-
-/* Reference: https://stackoverflow.com/questions/15639247/css-selector-for-nth-range#:~:text=5%20Answers,12%2C%202017%20at%2019:00
-   I googled how to use nth-child to set a range  */
- .container:nth-child(n+2):nth-child(-n+6) {
-     grid-column: 2 / span 3;
- }
-
- .accounts-image, .accounts.text-block {
-     grid-row: 2;
- }
-
- .onlinebanking-image, .onlinebanking.text-block {
-     grid-row: 3;
- }
-
- .security-image, .security.text-block {
-     grid-row: 4;
- }
-
- .loans-image, .loans.text-block {
-     grid-row: 5;
- }
-
- .contact-image, .contact.text-block {
-     grid-row: 6;
- }
-
- .accounts-image, .onlinebanking-image, .security-image, .loans-image, .contact-image {
-     position: relative;
-     grid-column: 1/-1;
-     max-height: 675px;
- }
-
- img {
-     width: 100%;
+iframe, img {
+     padding: 10px;
      height: 100%;
+     width: 95%;
 }
 
-      /*This will be a lot of rules.... but be strategic and combine selectors*/
+nav {
+     background-color: #00274C;
+     color: #FFFFFF;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 20px;
+}
 
-
- /* Step 8: Write the selector/rule property to style the .text-block class. */
- .text-block {
-     margin: auto;
-     text-align: center;
-     position: relative;
- }
-
- .text-block li {
-     text-align: left;
- }
-
-/* Add your media query here */
-
-@media screen and (min-width:825px) {
-
-  /* Step 10: Write the selector/rule property to style the nav element */
-  nav {
-     text-align: right;
-     padding: 35px 0;
-  }
-
-  /* Step 11: Write the selector/rule property to update the .container class */
-.container {
+footer {
+     background-color: #00274C;
+     color: #FFFFFF;
      display: grid;
-     grid-template-columns: repeat(7, 1fr);
+     grid-template-columns: 0.5fr 1fr 1fr;
 }
 
-  /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
-.accounts, .security, .contact {
-     grid-column: 4 / span 3;
+footer img {
+     width: 25%;
+     height: auto;
 }
 
-.onlinebanking, .loans {
-     grid-column: 2 / span 3;
+.accordian-div {
+     background-color: #f7f7f7;
+     margin: 10px;
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid #00274C;
 }
 
-.accounts-image, .security-image, .contact-image {
-     grid-column: 1 / span 5;
+p ul {
+    background-color: #e2e2e2; 
 }
 
-.onlinebanking-image, .loans-image {
-     grid-column: 3 / span 5;
+/* I wanted to turn the Resume FAQ section into an accordian and referred to the code on the website
+     https://prismic.io/blog/css-accordions */
+
+.accordion {
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid #00274C;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
- /* Step 16:Write the selector/rule property to update the .text-block class */
- .text-block {
-     max-height: 235px;
-     overflow: scroll;
- }
+details {
+  border-bottom: 1px solid #00274C;
+}
 
+details:last-of-type {
+  border-bottom: none;
+}
+
+summary {
+  font-size: 18px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  line-height: 1.5;
+}
+
+summary:hover {
+  background-color: #e2e2e2;
+}
+
+details[open] summary {
+  background-color: #e2e2e2;
+}
+
+details p {
+  padding: 12px 16px;
+  margin: 0;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+/* End: accordian code from https://prismic.io/blog/css-accordions */
+
+/* To figure out how to keep text the same color after clicking on it, I looked at the code in this
+Stack Overflow: https://stackoverflow.com/questions/8188060/how-to-make-link-not-change-color-after-visited */
+nav a, nav a:visited, footer a, footer a:visited {
+    color: inherit;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.mini-note {
+     outline: solid 4px #FFCB05;
+     outline-offset: 2px;
+     font-weight: 500;
+     text-align: center;
+     border-radius: 2px;
+     margin: 40px 20px;
+     padding: 5px;
+}
+
+.logo img{
+     width: 5%;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2rem;
+  /* cursor: pointer; */
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: auto;
+  /* background-color: #00274C; */
+  /* color: #FFF; */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+}
+
+/* Link styling */
+.nav-menu a, .nav-menu a:visited {
+  color: inherit;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Responsive: Hide links in nav bar, keep logo and toggle */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 }
