@@ -6,7 +6,7 @@ body {
      color: #131516;
 }
 
-main p, main h2, main h3 {
+main p, main h2, main h3, main h4 {
      margin: 0px 20px;
 }
 
@@ -36,6 +36,22 @@ p, h3 {
      line-height: 1.4;
 }
 
+h4 {
+     font-size: 18px;
+     padding: 10px 0px 0px 0px;
+     text-decoration: underline 2px #FFCB05;
+     text-underline-offset: 4px;
+}
+
+h5 {
+     font-size: 18px;
+     text-align: center;
+     font-weight: 500;
+     kerning: normal;
+     text-decoration: underline double 1.5px #FFCB05;
+     text-underline-offset: 4px;
+}
+
 ul li {
      font-size: 18px;
      padding: 10px 0px;
@@ -54,6 +70,8 @@ ol li {
      width: 100%;
      height: auto;
      outline: #00274C solid 2px;
+     padding: 0px;
+     margin: 0px;
 }
 
 .skip-to-main a {
@@ -129,6 +147,7 @@ p ul {
      padding: 5px 15px 2px 5px;
      font-weight: 600;
      font-kerning: normal;
+     cursor: pointer;
 }
 
 .resource-links a:visited {
@@ -171,6 +190,29 @@ p ul {
   text-decoration: none;
 }
 
+.interviews-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 0.5fr);
+     grid-template-rows: repeat(4, 1fr);
+     gap: 10px;
+     justify-content: center;
+     margin: 10px 15px 20px 15px;
+}
+
+.interviews-grid-item {
+     padding: 3px;
+     padding-top: 10%;
+     text-align: center;
+     text-decoration: none;
+     color:#131516;
+     border: 2px solid #00274C;
+     border-radius: 3px;
+     line-height: 1.2;
+}
+
+.interviews-grid p {
+     padding-top: 15%;
+}
 /* I wanted to turn the Resume FAQ and Cover Letter FAQsection into an accordian and referred to the code 
 on the website https://prismic.io/blog/css-accordions */
 
