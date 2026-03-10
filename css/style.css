@@ -43,15 +43,6 @@ h4 {
      text-underline-offset: 4px;
 }
 
-h5 {
-     font-size: 1.125rem;
-     text-align: center;
-     font-weight: 500;
-     kerning: normal;
-     text-decoration: underline double 1.5px #FFCB05;
-     text-underline-offset: 4px;
-}
-
 ul li {
      font-size: 1.125rem;
      padding: 10px 0px;
@@ -224,6 +215,19 @@ p ul {
   text-decoration: none;
 }
 
+.interviews-grid-item p {
+     font-size: 1rem;
+}
+
+.grid-title {
+     font-size: 1.125rem;
+     text-align: center;
+     font-weight: 500;
+     kerning: normal;
+     text-decoration: underline double 1.5px #FFCB05;
+     text-underline-offset: 4px;
+}
+
 .interviews-grid {
      display: grid;
      grid-template-columns: repeat(2, 0.5fr);
@@ -234,8 +238,7 @@ p ul {
 }
 
 .interviews-grid-item {
-     padding: 3px;
-     padding-top: 10%;
+     padding: 0px 3px 3px 3px;
      text-align: center;
      text-decoration: none;
      color:#131516;
@@ -244,13 +247,6 @@ p ul {
      line-height: 1.2;
 }
 
-.interviews-grid-item p {
-     font-size: 1rem;
-}
-
-.interviews-grid p {
-     padding-top: 15%;
-}
 /* I wanted to turn the Resume FAQ and Cover Letter FAQsection into an accordian and referred to the code 
 on the website https://prismic.io/blog/css-accordions */
 
