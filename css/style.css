@@ -15,7 +15,7 @@ main ul {
 }
 
 h1 {
-     font-size: 30px;
+     font-size: 1.875rem;
      font-weight: 600;
      padding: 30px 10px 10px 10px;
      text-decoration: underline solid #FFCB05 2px;
@@ -25,26 +25,26 @@ h1 {
 }
 
 h2 {
-     font-size: 20px;
+     font-size: 1.25rem;
      font-weight: 600;
      padding: 20px 0px 20px 0px;
 }
 
 p, h3 {
-     font-size: 18px;
+     font-size: 1.125rem;
      padding: 10px 0px 20px 0px;
      line-height: 1.4;
 }
 
 h4 {
-     font-size: 18px;
+     font-size: 1.125rem;
      padding: 10px 0px 0px 0px;
      text-decoration: underline 2px #FFCB05;
      text-underline-offset: 4px;
 }
 
 h5 {
-     font-size: 18px;
+     font-size: 1.125rem;
      text-align: center;
      font-weight: 500;
      kerning: normal;
@@ -53,14 +53,14 @@ h5 {
 }
 
 ul li {
-     font-size: 18px;
+     font-size: 1.125rem;
      padding: 10px 0px;
      margin: 0px 20px 0px 10px;
      line-height: 1.4;
 }
 
 ol li {
-     font-size: 18px;
+     font-size: 1.125rem;
      padding: 10px 0px;
      margin: 0px 20px 0px 40px;
      line-height: 1.4;
@@ -102,25 +102,59 @@ iframe, img {
 nav {
      background-color: #00274C;
      color: #FFFFFF;
-     display: flex;
-     justify-content: space-between;
+     display: grid;
+     justify-content: center;
      align-items: center;
-     padding: 10px 20px;
+     padding: 10px 5px;
+}
+
+.logo img {
+     width: 100%;
+     height: auto;
+     max-width: 50px;
+}
+
+.nav-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 2px solid white;
+}
+
+.CDO-title {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-bottom {
+  margin-top: 10px;
 }
 
 footer {
      background-color: #00274C;
      color: #FFFFFF;
-     display: grid;
-     grid-template-columns: 0.5fr 1fr 1fr;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+     padding: 10px;
+     align-items: center;
 }
 
-footer img {
-     width: 25%;
-     height: auto;
+.UMSI-footer, footer .nav-links {
+  flex: 1 1 200px;
+  text-align: center;
 }
 
-.send-off-phrase {
+.UMSI-footer p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+footer .nav-links ul {
+     list-style-type: none;
+}
+
+.centered-phrase {
      text-align: center;
 }
 
@@ -210,6 +244,10 @@ p ul {
      line-height: 1.2;
 }
 
+.interviews-grid-item p {
+     font-size: 1rem;
+}
+
 .interviews-grid p {
      padding-top: 15%;
 }
@@ -233,7 +271,7 @@ details:last-of-type {
 }
 
 summary {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 12px 16px;
   cursor: pointer;
   font-weight: 600;
@@ -274,53 +312,4 @@ nav a, nav a:visited, footer a, footer a:visited {
      border-radius: 2px;
      margin: 40px 20px;
      padding: 5px;
-}
-
-.logo img{
-     width: 5%;
-}
-
-.menu-toggle {
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: 2rem;
-  /* cursor: pointer; */
-}
-
-.nav-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: auto;
-  /* background-color: #00274C; */
-  /* color: #FFF; */
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-menu ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  list-style: none;
-  align-items: center;
-  padding: 0;
-}
-
-/* Link styling */
-.nav-menu a, .nav-menu a:visited {
-  color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-/* Responsive: Hide links in nav bar, keep logo and toggle */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
 }
