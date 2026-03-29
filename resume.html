@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/UM_academic_logo.png">
+    <link rel="icon" type="image/png" href="images/UM-MLogo.jpg">
+    <!-- Font Nunito Sans imported from Google Fonts -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    </style>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Resumes</title>
@@ -32,7 +36,7 @@
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "resume.html">Resumes</a></li>
                 <li><a href = "networking.html">Networking & Connections</a></li>
-                <li><a href = "interviews.html">Preparing for Behavioral Interviews</a></li>
+                <li><a href = "interviews.html">Behavioral Interviews</a></li>
             </ul>
           </div>
         </nav>
@@ -217,9 +221,22 @@
     </main>
     <footer>
 
-        <div class="UMSI-footer">
+        <div class="UMSI-mobile-footer">
           <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
         </div>
+
+        <div class="UMSI-desktop-footer">
+          <p>University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+          <hr>
+          <p>Copyright &copy; <span id="copyrightYear"></span> University of Michigan</p>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            let currentYear = new Date().getFullYear();
+            document.getElementById('copyrightYear').textContent = currentYear;
+          })
+        </script>
 
         <div class="nav-links">
             <ul>

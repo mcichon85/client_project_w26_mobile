@@ -1,6 +1,6 @@
 /* Monica Cichon - SI 539 Mobile Deliverable - Client Project */
 
-
+/* mobile view */
 body {
      font-family: "Nunito Sans", sans-serif;
      color: #131516;
@@ -39,8 +39,6 @@ p, h3 {
 h4 {
      font-size: 1.125rem;
      padding: 10px 0px 0px 0px;
-     text-decoration: underline 2px #FFCB05;
-     text-underline-offset: 4px;
 }
 
 ul li {
@@ -308,4 +306,177 @@ nav a, nav a:visited, footer a, footer a:visited {
      border-radius: 2px;
      margin: 40px 20px;
      padding: 5px;
+}
+
+.UMSI-mobile-footer {
+          display: block;
+     }
+
+     .UMSI-desktop-footer {
+          display: none;
+     }
+
+/* desktop screen */
+@media screen and (min-width: 960px) {
+     main p, main h2, main h3, main h4 {
+          margin: 0px 40px;
+     }
+
+     main ul {
+          margin: 0px 70px;
+     }
+
+     main ol {
+          margin: 0px 40px;
+     }
+
+     nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     .nav-top {
+          display: flex;
+          align-items: center;
+          border-bottom: none;
+     }
+
+     .nav-links {
+          margin-left: auto;
+     }
+
+     .nav-links ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin-left: 20px;
+          margin-top: 10px;
+          gap: 5px;
+          justify-content: end;
+          text-decoration: underline solid 1px white;
+          text-underline-offset: 4px;
+     }
+
+     .CDO-title p{
+          font-size: 25px;
+          margin-top: 10px;
+          font-weight: medium;
+     }
+
+     .nav-links ul li {
+          margin-top: -10px;
+          gap: 1px;
+          /* outline: solid yellow 2px; */
+     }
+
+     main section:first-child{
+          display: flex;
+          flex-wrap: wrap;
+     }
+     main section:first-child h2 {
+          order: 2;
+     }
+     /* I used UM-GPT to figure out how to style only the first two paragraphs in the section. My prompt was:
+     "When styling a section, how would i only grab the first two p? since there are three in the section but i dont want to use the third p?" */
+     main section:first-child p:nth-of-type(-n + 2) {
+          order: 3;
+
+     }
+     main section:first-child .mini-note {
+          order: 4;
+          width: 100%;
+
+     }
+
+     main section:first-child img {
+          order: 1;
+          width: 100%;
+          margin: 0px;
+          padding: 10px 0px;
+     }
+
+     main section h2 {
+          text-align: left;
+          margin-top: 10px;
+     }
+
+     main section h3 {
+          outline: solid 4px #FFCB05;
+          outline-offset: 2px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 2px;
+          margin: 40px 20px;
+          padding: 5px;
+     }
+
+     section:last-child img, .img-container img{
+          border-radius: 4%;
+          width: 85%;
+     }
+
+     .img-container {
+          text-align: center;
+     }
+
+     .centered-phrase {
+          outline: none;
+          margin: 0px 0px 10px 0px;
+          padding: 0px;
+          font-weight: bold;
+          kerning: 1;
+          font-size: 20px;
+     }
+
+     footer {
+          padding: 20px 0px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+     }
+
+     footer .UMSI-footer {
+          padding-left: 40px;
+     }
+
+     footer .nav-links {
+          margin-left: auto;
+     }
+
+     footer .nav-links ul {
+          margin: 0px;
+          padding-right: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+     }
+
+     footer .nav-links ul:hover, nav .nav-links ul:hover {
+          text-decoration-color: #FFCB05;
+          color: #FFCB05;
+     }
+
+     .UMSI-mobile-footer {
+          display: none;
+     }
+
+     .UMSI-desktop-footer {
+          display: block;
+          margin-left: 40px;
+     }
+
+     .UMSI-desktop-footer p:last-child{
+          margin-top: 5px;
+          font-size: 16px;
+          font-weight: normal;
+          font-style: italic;
+     }
+
+     hr{
+          border: 0;
+          height: 2px;
+          margin: 0px;
+          padding: 0px;
+          background: linear-gradient(to right, transparent, white, transparent);
+     }
 }

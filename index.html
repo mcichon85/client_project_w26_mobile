@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/UM_academic_logo.png">
+    <link rel="icon" type="image/png" href="images/UM-MLogo.jpg">
     <!-- Font Nunito Sans imported from Google Fonts -->
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
@@ -37,7 +37,7 @@
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "resume.html">Resumes</a></li>
                 <li><a href = "networking.html">Networking & Connections</a></li>
-                <li><a href = "interviews.html">Preparing for Behavioral Interviews</a></li>
+                <li><a href = "interviews.html">Behavioral Interviews</a></li>
             </ul>
           </div>
         </nav>
@@ -52,7 +52,9 @@
         Ready to take the next step toward your future career? <br><br> The UMSI Career Development Resource Hub is your one-stop shop for trusted guidance, practical tools, and the latest information to help you thrive as a student and job-seeker. Whether you are just starting your exploration or getting ready to launch your career, you will find everything you need, organized for you.
       </p>
         <!-- <iframe src="https://www.youtube.com/embed/GSjGeDYJ5Nk?si=qhxJPRTIT___x8hG" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-      <img src="images/FLINT_First Day of Class_0028.jpg" alt="Two students talking and walking togther.">
+      <div class="img-container">
+        <img src="images/FLINT_First Day of Class_0028.jpg" alt="Two students talking and walking togther.">
+      </div>
 
     </section>
 
@@ -69,23 +71,15 @@
       </ul>
     </section>
         <section>
-        <img src="images/UMSI_CareerFair2020_13.jpg" alt="A student talks with a recruiter at the UMSI career fair.">
+        <div class="img-container">
+          <img src="images/UMSI_CareerFair2020_13.jpg" alt="A student talks with a recruiter at the UMSI career fair.">
+        </div>
       <h2 class = "mini-note">Start Here</h2>
       <div>
-        
+        <h2>Most Popular Resources</h2>
         <ul>
-            <li><a href="resume.html">Resumes</a></li>
-            <li><a href="networking.html">Networking & Connections</a></li>
-            <li><a href="interviews.html">Preparing for the Behavioral Interview</a></li>
-            <li><a href="https://docs.google.com/document/d/1C-rxX5VcjVH7YjMdHil1VMo9ZdSOHmausOcX61dld-g/edit?tab=t.0#heading=h.m3fsccjzqtbh">Career Exploration with AI</a></li>
-            <li><a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach">Talk to a Career Coach</a></li>
-        </ul>
-       
-
-      </div>
-      <div>
-        <h3 class = "centered-phrase">Most Popular Resources</h3>
-        <ul>
+          <li><a href="https://docs.google.com/document/d/1C-rxX5VcjVH7YjMdHil1VMo9ZdSOHmausOcX61dld-g/edit?tab=t.0#heading=h.m3fsccjzqtbh">Career Exploration with AI</a></li>
+          <li><a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach">Talk to a Career Coach</a></li>
           <li><a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank">UMSI Resume Guide</a></li>
           <li><a href="https://umich.instructure.com/courses/137916/pages/attend-an-event" target="_blank">Attend a Career Event</a></li>
           <li><a href="https://docs.google.com/document/d/18HMt79BU8ovGf9z7_P7No5tuwUS6qHNW5u0sgrepLtE/edit?tab=t.0" target="_blank">Networking Tips</a></li>
@@ -95,7 +89,7 @@
       </div>
     </section>
     <section>
-      <h2 class="centered-phrase">Connect with the UMSI Career Development Office</h2>
+      <h2>Connect with the UMSI Career Development Office</h2>
       <p>
         The UMSI Career Development Office (CDO) offers personalized support through appointments, events, and resource guides. <a href="https://umich.instructure.com/courses/137916" target="_blank">Visit the CDO website</a> or <a href="https://www.si.umich.edu/about-umsi/getting-umsi" target="_blank">find us on campus</a> to learn more, schedule a coaching session, or just say hello.
       </p>
@@ -103,9 +97,22 @@
     </main>
     <footer>
 
-        <div class="UMSI-footer">
+        <div class="UMSI-mobile-footer">
           <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
         </div>
+
+        <div class="UMSI-desktop-footer">
+          <p>University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+          <hr>
+          <p>Copyright &copy; <span id="copyrightYear"></span> University of Michigan</p>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            let currentYear = new Date().getFullYear();
+            document.getElementById('copyrightYear').textContent = currentYear;
+          })
+        </script>
 
         <div class="nav-links">
             <ul>
