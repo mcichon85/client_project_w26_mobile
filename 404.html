@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/UM-MLogo.jpg">
+    <!-- Font Nunito Sans imported from Google Fonts -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MSI Career Development Resource Hub</title>
+</head>
+<body>
+
+    <header>
+      <div class = "skip-to-main" >
+        <a href = "">Skip to Main Content</a>
+      </div>
+
+        <nav>
+          <div class = "nav-top">
+            <div class="logo">
+            <a>
+              <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </a>
+           </div>
+
+           <div class = "CDO-title">
+            <p>Career Development Office</p>
+           </div>
+          </div>
+
+          <!-- I asked UM-GPT to help me create the hamburger menu design (prompt in CSS)-->
+          <button class="nav-toggle">
+            <span class="sr-only">Menu</span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+           <div class="nav-links">
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li><a href = "networking.html">Networking & Connections</a></li>
+                <li><a href = "interviews.html">Behavioral Interviews</a></li>
+            </ul>
+          </div>
+        </nav>
+
+    </header>
+    <main>
+      <img class = "hero-image" src="images/UMSI_SnowDay_012523_03.jpg" alt="A snowman in front of the Hatcher Graduate Library.">
+      <h1>404 Error</h1>
+      
+    <section class="centered-phrase">
+        <h2 class="centered-phrase" >Oops! Looks like this page took a snow day and cannot be found!</h2>
+        <a class="return-home-button" href="index.html">Take me back home</a>
+    </section>
+
+    </main>
+    <footer>
+
+        <div class="UMSI-mobile-footer">
+          <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        </div>
+
+        <div class="UMSI-desktop-footer">
+          <p>University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+          <hr>
+          <p>Copyright &copy; <span id="copyrightYear"></span> University of Michigan</p>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            let currentYear = new Date().getFullYear();
+            document.getElementById('copyrightYear').textContent = currentYear;
+          })
+        </script>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li><a href = "networking.html">Networking & Connections</a></li>
+                <li><a href = "interviews.html">Preparing for Behavioral Interviews</a></li>
+            </ul>
+          </div>
+        </footer>
+        <script src="hamburger.js"></script>
+</body>
+</html>

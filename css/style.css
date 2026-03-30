@@ -18,7 +18,7 @@ h1 {
      font-size: 1.875rem;
      font-weight: 600;
      padding: 30px 10px 10px 10px;
-     text-decoration: underline solid #FFCB05 2px;
+     text-decoration: underline solid #FFCB05 4px;
      text-align: center;
      text-underline-offset: 4px;
 
@@ -309,12 +309,27 @@ nav a, nav a:visited, footer a, footer a:visited {
 }
 
 .UMSI-mobile-footer {
-          display: block;
-     }
+     display: block;
+}
 
-     .UMSI-desktop-footer {
-          display: none;
-     }
+.UMSI-desktop-footer {
+     display: none;
+}
+
+.sr-only{
+     position:absolute;
+     width:1px; height:1px;
+     padding:0; margin:-1px;
+     overflow:hidden;
+     clip:rect(0,0,0,0);
+     white-space:nowrap;
+     border:0;
+}
+
+nav{ position: relative; }
+
+.nav-toggle { display: none; }
+.nav-links  { display: block; }
 
 /* desktop screen */
 @media screen and (min-width: 960px) {
@@ -360,7 +375,7 @@ nav a, nav a:visited, footer a, footer a:visited {
      .CDO-title p{
           font-size: 25px;
           margin-top: 10px;
-          font-weight: medium;
+          font-weight: 500px;
      }
 
      .nav-links ul li {
@@ -478,5 +493,110 @@ nav a, nav a:visited, footer a, footer a:visited {
           margin: 0px;
           padding: 0px;
           background: linear-gradient(to right, transparent, white, transparent);
+     }
+
+     .return-home-button {
+          display: inline-block;
+          background-color:#00274C;
+          color: white;
+          font-weight: 500;
+          font-size: 20px;
+          margin-top: 30px;
+          margin-bottom: 10px;
+          padding: 20px;
+          border-radius: 10px;
+          text-underline-offset: 5px;
+     }
+
+     .return-home-button:hover, .return-home-button:focus{
+          background: white;
+          color: #00274C;
+          border: solid 3px #00274C;
+     }
+
+     .centered-phrase h2 {
+          margin-top: 10px;
+     }
+
+
+     /* I asked UM-GPT to help me style the hamburger menu design and figure out to convert the hamburger menu to an X using CSS.
+     I prompted UM-GPT with "this is the hamburger button and nav bar html I am working with [copy pasted my code], how do I 
+     use the hamburger menu and turn it into an X when the grid of nav links are shown?"*/
+     .nav-toggle { display: grid; }
+     nav:not(.open) .nav-links { display: none; }
+     nav.open .nav-links { display: block; }
+
+     nav{
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     }
+
+     nav .nav-top{ order: 1; }
+     nav .nav-links{ order: 2; }
+     nav .nav-toggle{ order: 3; }
+
+     nav .nav-toggle{
+     order: 3;
+     margin-left: auto;
+     display: grid;
+     place-items: center;
+     width: 44px;
+     height: 44px;
+     background: transparent;
+     border: 2px solid #fff;
+     border-radius: 6px;
+     cursor: pointer;
+     padding: 0;
+
+     position: relative;
+     }
+
+     nav .nav-links{
+     margin-left: 0;
+     }
+
+     nav .nav-toggle .bar{
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     width: 24px;
+     height: 3px;
+     background: #fff;
+     border-radius: 2px;
+     display: block;
+     transition: transform .2s ease, opacity .2s ease;
+     }
+
+     /* hamburger (closed) positions
+     bars are 2/3/4 */
+     nav .nav-toggle .bar:nth-child(2){ transform: translate(-50%, calc(-50% - 8px)); }
+     nav .nav-toggle .bar:nth-child(3){ transform: translate(-50%, -50%); }
+     nav .nav-toggle .bar:nth-child(4){ transform: translate(-50%, calc(-50% + 8px)); }
+
+     /* closed/open states */
+     nav:not(.open) .nav-links{ display: none; }
+     nav.open .nav-links{ display: block; }
+
+     /* your link layout (2 columns) */
+     nav.open .nav-links ul{
+     display: grid;
+     grid-template-columns: repeat(2, max-content);
+     gap: 5px 16px;
+     justify-content: end;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     }
+
+     /* open state -> X */
+     nav.open .nav-toggle .bar:nth-child(2){
+     transform: translate(-50%, -50%) rotate(45deg);
+     }
+     nav.open .nav-toggle .bar:nth-child(3){
+     opacity: 0;
+     }
+     nav.open .nav-toggle .bar:nth-child(4){
+     transform: translate(-50%, -50%) rotate(-45deg);
      }
 }
