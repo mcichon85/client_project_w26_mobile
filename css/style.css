@@ -286,10 +286,14 @@ details p {
   letter-spacing: 1px;
 }
 
-.CDO-title-container .CDO-title {
+nav .CDO-title-container .CDO-title {
      font-size: 25px;
      margin-top: 10px;
-     font-weight: 500px;
+     font-weight: 500;
+     padding: 0;
+     margin: 0;
+     text-decoration: none;
+     text-align: left;
 }
 
 /* End: accordian code from https://prismic.io/blog/css-accordions */
