@@ -110,11 +110,6 @@ nav {
   border-bottom: 2px solid white;
 }
 
-.CDO-title {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
 .nav-bottom {
   margin-top: 10px;
 }
@@ -288,6 +283,17 @@ details p {
   line-height: 1.5;
 }
 
+.CDO-title-container {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.CDO-title-container .CDO-title {
+     font-size: 25px;
+     margin-top: 10px;
+     font-weight: 500px;
+}
+
 /* End: accordian code from https://prismic.io/blog/css-accordions */
 
 /* To figure out how to keep text the same color after clicking on it, I looked at the code in this
@@ -370,12 +376,6 @@ nav{ position: relative; }
           justify-content: end;
           text-decoration: underline solid 1px white;
           text-underline-offset: 4px;
-     }
-
-     .CDO-title p{
-          font-size: 25px;
-          margin-top: 10px;
-          font-weight: 500px;
      }
 
      .nav-links ul li {
