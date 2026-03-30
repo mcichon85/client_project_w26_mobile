@@ -217,8 +217,6 @@ p ul {
      text-align: center;
      font-weight: 500;
      kerning: normal;
-     text-decoration: underline double 1.5px #FFCB05;
-     text-underline-offset: 4px;
 }
 
 .interviews-grid {
