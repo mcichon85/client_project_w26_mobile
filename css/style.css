@@ -468,7 +468,7 @@ nav{ position: relative; }
           align-items: flex-end;
      }
 
-     footer .nav-links ul:hover, nav .nav-links ul:hover {
+     nav .nav-links a:hover, nav .nav-links a:focus, footer .nav-links a:hover, footer .nav-links a:focus {
           text-decoration-color: #FFCB05;
           color: #FFCB05;
      }
